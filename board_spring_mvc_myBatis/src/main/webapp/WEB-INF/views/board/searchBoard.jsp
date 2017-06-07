@@ -57,7 +57,7 @@
 					<tr><td>업로드 한 파일</td>
 						<td>
 							<c:forEach  var="file"  items='${board.files}'>
-								<a href="filedown.do?sfilename=${file.fileName}">${file.rfileName}</a><br/>
+								<a href="filedown.do?sfilename=${file.sfilename}&rfilename=${file.rfilename}">${file.rfilename}</a><br/>
 							</c:forEach>
 						</td>
 					</c:if>

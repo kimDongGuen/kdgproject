@@ -19,7 +19,7 @@ body {
 
 #private ul {
 		margin: 0 auto;
-		width: 400px;
+		width: 500px;
 		list-style: none;
 	}
 
@@ -30,7 +30,7 @@ body {
 		#private  ul li a {
 			display: block;
 			margin-right: 20px;
-			width: 120px;
+			width: 100px;
 			font-size: 14px;
 			line-height: 44px;
 			text-align: center;

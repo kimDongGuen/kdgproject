@@ -20,8 +20,8 @@
 	    <!-- primary key 인경우 id 태그로 설정  -->
 		<id  	column="fileno"    	property="no"/>
 		<!-- primary key가 아닌 다른 column -->
-		<result	column="rfilename" 	property="rfileName"/>
-		<result	column="sfilename" 	property="fileName"/>
+		<result	column="rfilename" 	property="rfilename"/>
+		<result	column="sfilename" 	property="sfilename"/>
 		<result	column="bno" 		property="bno"/>
 	</resultMap>
 
@@ -43,7 +43,7 @@
 			 
 		 -->
 		<collection property="files" 		ofType="boardfile"  
-					resultMap="boardmap"/>
+					resultMap="filemap"/>
 	</resultMap>
 	<select id="search"		parameterType="int"  resultMap="boardmap" >
 		select 	b.no no, id, title, contents ,regdate        

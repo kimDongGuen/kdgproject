@@ -3,24 +3,22 @@ package com.kdn.model.domain;
 import java.io.Serializable;
 public class BoardFile implements Serializable {
 	private int no;
-	private String rfileName;
-	private String fileName;
+	private String rfilename;
+	private String sfilename;
 	private int bno;
 	public BoardFile(){}
-	public BoardFile(int no, String rfileName, String fileName, int bno) {
+	public BoardFile(String rfilename, String filename) {
+		super();
+		this.rfilename = rfilename;
+		this.sfilename = filename;
+	}
+
+	public BoardFile(int no, String rfilename, String filename, int bno) {
 		super();
 		this.no = no;
-		this.rfileName = rfileName;
-		this.fileName = fileName;
+		this.rfilename = rfilename;
+		this.sfilename = filename;
 		this.bno = bno;
-	}
-	@Override
-	public String toString() {
-		return  new StringBuilder().append("BoardFile [no=")
-				.append(no).append(", rfileName=")
-				.append(rfileName).append(", fileName=")
-				.append(fileName).append(", bno=")
-				.append(bno).append("]").toString();
 	}
 	public int getNo() {
 		return no;
@@ -28,17 +26,18 @@ public class BoardFile implements Serializable {
 	public void setNo(int no) {
 		this.no = no;
 	}
-	public String getRfileName() {
-		return rfileName;
+	public String getRfilename() {
+		return rfilename;
 	}
-	public void setRfileName(String rfileName) {
-		this.rfileName = rfileName;
+	public void setRfilename(String rfilename) {
+		this.rfilename = rfilename;
 	}
-	public String getFileName() {
-		return fileName;
+	
+	public String getSfilename() {
+		return sfilename;
 	}
-	public void setFileName(String fileName) {
-		this.fileName = fileName;
+	public void setSfilename(String sfilename) {
+		this.sfilename = sfilename;
 	}
 	public int getBno() {
 		return bno;
@@ -46,7 +45,11 @@ public class BoardFile implements Serializable {
 	public void setBno(int bno) {
 		this.bno = bno;
 	}
-	
+	@Override
+	public String toString() {
+		return "BoardFile [no=" + no + ", rfilename=" + rfilename
+				+ ", filename=" + sfilename + ", bno=" + bno + "]";
+	}
 }
 
 

@@ -13,7 +13,7 @@ $(function(){
 var count=0;   //file form index
 function addFileForm(){
 	var html="<div id='item_"+count+"'>"
-	html+="<input type='file' name='fileup"+count+"' />";
+	html+="<input type='file' name='fileup'  />";
 	html+="<input type='button' value='삭제' onclick='removeForm("+count+")'/></div>";
 	count++;
 	//html=$("#content").html()+html;
@@ -34,7 +34,7 @@ function removeForm(count){
 			    <td><input type="text" name="title" id="title"/></td>
 			</tr>
 			<tr height="50"><td><label for="title">아이디</label></td>
-			    <td><input type="text" name="id" id="id"/></td>
+			    <td><input type="text" name="id" id="id"  disabled="disabled" value="${id}"/></td>
 			</tr>
 			<tr height="50" ><td><label for="fileup">업로드할 파일</label></td>
 			    <td>

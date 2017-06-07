@@ -3,6 +3,8 @@ package com.kdn.model.domain;
 import java.io.Serializable;
 import java.util.List;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class Board implements Serializable{
 	private int no;
 	private String id;
@@ -10,6 +12,7 @@ public class Board implements Serializable{
 	private String regdate;
 	private String contents;
 	private List<BoardFile>  files;    //조인 정보
+	private MultipartFile[] fileup;
 	public Board(){}
 	public Board(int no, String id, String title) {
 		this.no = no;
@@ -40,6 +43,13 @@ public class Board implements Serializable{
 				.append(contents).append(", files=")
 				.append(files).append("]");
 		return builder.toString();
+	}
+	
+	public MultipartFile[] getFileup() {
+		return fileup;
+	}
+	public void setFileup(MultipartFile[] fileup) {
+		this.fileup = fileup;
 	}
 	public int getNo() {
 		return no;
